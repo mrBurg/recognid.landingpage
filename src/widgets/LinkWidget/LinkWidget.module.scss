@@ -1,0 +1,27 @@
+@import '@scss/service';
+
+.button {
+  width: 100%;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  padding: 1em 0;
+  background-color: $yellow;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $rose-dark;
+  box-shadow: 2px 4px 6px rgba(37, 48, 149, 0.25);
+  cursor: pointer;
+
+  @media only screen and (max-width: $mob) {
+    font-size: 0.875em;
+  }
+
+  &:hover {
+    background-color: $yellow-dark;
+  }
+  &:focus,
+  &:active {
+    background-color: $yellow-light;
+  }
+}

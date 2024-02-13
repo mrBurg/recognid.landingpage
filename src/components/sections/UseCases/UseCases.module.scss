@@ -1,0 +1,149 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 13.5em 4.25em;
+  align-items: center;
+
+  @media only screen and (max-width: $xxl) {
+    padding: 0 3em 5em;
+  }
+  @media only screen and (max-width: $tab) {
+    padding: 0 1.5em 5em;
+  }
+}
+
+.itemsWrap {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.5em;
+
+  @media only screen and (max-width: $xxl) {
+    margin-top: 3em;
+    max-width: 704px;
+  }
+
+  @media only screen and (max-width: $tab) {
+    margin-top: 1.25em;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2.5em;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5.625em;
+
+    @media only screen and (max-width: $xxl) {
+      column-gap: 3.5em;
+    }
+    @media only screen and (max-width: $tab) {
+      flex-direction: column;
+      row-gap: 1.5em;
+      align-items: center;
+      max-width: 327px;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+      @media only screen and (max-width: $tab) {
+        flex-direction: column;
+      }
+    }
+
+    .image {
+      display: flex;
+      width: 458px; //100%;
+      min-width: 458px;
+      max-width: 458px;
+      height: 310px;
+      max-height: 310px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      @media only screen and (max-width: $xxl) {
+        // @media only screen and (max-width: $tab) {
+        width: 327px; //100%;
+        min-width: 327px;
+        max-width: 327px;
+        height: 221px;
+        max-height: 221px;
+      }
+    }
+
+    .itemDetails {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 2.6em 0 3.5em;
+
+      justify-content: center;
+      row-gap: 1.25em;
+
+      @media only screen and (max-width: $xxl) {
+        margin: 0;
+      }
+      @media only screen and (max-width: $tab) {
+        margin: 0;
+        row-gap: 1em;
+      }
+    }
+
+    h4 {
+      display: flex;
+      align-items: flex-end;
+      font-size: 1.5em;
+      color: $violetDark;
+
+      @media only screen and (max-width: $xxl) {
+        // @media only screen and (max-width: $tab) {
+        height: auto;
+        font-size: 1.125em;
+      }
+    }
+  }
+}
+
+.innerList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3em;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.9em;
+
+    span {
+      font-size: 1em;
+      color: $violet-light;
+      text-align: start;
+
+      @media only screen and (max-width: $xxl) {
+        // @media only screen and (max-width: $tab) {
+        font-size: 0.813em;
+      }
+    }
+  }
+}
+
+.footnote {
+  font-size: 1.375em;
+  color: $violetDark;
+
+  @media only screen and (max-width: $xxl) {
+    // @media only screen and (max-width: $tab) {
+    font-size: 0.875em;
+  }
+}
+
+.linkWidget {
+  max-width: 240px;
+  margin: 2em auto 0;
+}

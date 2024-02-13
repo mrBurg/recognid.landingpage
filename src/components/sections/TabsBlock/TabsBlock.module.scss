@@ -1,0 +1,157 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 6.8em 0;
+  background-image: url(/images/pinkWithColorsBackground.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media only screen and (max-width: $mob) {
+    padding: 3.5em 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  margin-top: 6.7em;
+  //   column-gap: 6em;
+  flex-direction: column;
+
+  @media only screen and (max-width: $tab) {
+    // align-items: center;
+    margin-top: 2em;
+  }
+}
+
+.tabsWrap {
+  display: flex;
+  max-width: 546px;
+}
+
+.tab {
+  width: 100%;
+  border: 1px solid $rose;
+  padding: 0.95em 0; //83px;
+  color: $rose;
+  background: #ffffff;
+  box-shadow: 2px 4px 5px rgba(37, 48, 149, 0.1);
+  border-radius: 5px;
+  cursor: pointer;
+
+  @media only screen and (max-width: $mob) {
+    //width: 50%;
+    font-size: 0.8em;
+    padding: 0.7em 0; //1.5em;
+  }
+
+  &:hover {
+    color: $violetDark;
+  }
+}
+.active {
+  background-color: $pink;
+  color: $white;
+  cursor: auto;
+  border: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.description {
+  width: 100%;
+  background-color: $white;
+  border-radius: 5px;
+  padding: 3.5em;
+  display: flex;
+  grid-column-gap: 2em;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tab) {
+    flex-direction: column;
+    grid-row-gap: 1em;
+    //     align-items: center;
+  }
+
+  @media only screen and (max-width: $mob) {
+    padding: 2em 1.5em;
+  }
+
+  .listWrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabTitle {
+    font-size: 2em;
+    font-weight: 600;
+    color: $violetDark;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    font-weight: 400;
+    color: $violet-light;
+    row-gap: 1.4em;
+    padding-top: 2em;
+    padding-left: 1.5em;
+
+    @media only screen and (max-width: $tab) {
+      font-size: 0.9em;
+    }
+
+    li {
+      list-style-image: url('/images/checkmark.svg');
+      padding-left: 1em;
+    }
+  }
+
+  .button {
+    max-width: 260px;
+    margin: 3.5em 0 0;
+
+    @media only screen and (max-width: $mob) {
+      max-width: 100%;
+      margin: 1em 0 0;
+    }
+  }
+}
+
+.img {
+  max-width: 458px;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  min-width: 458px;
+  max-width: 458px;
+  height: 310px;
+  max-height: 310px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @media only screen and (max-width: $tab) {
+    height: 271px;
+    min-width: 0;
+    max-width: 401px;
+  }
+  @media only screen and (max-width: $mob) {
+    height: 188px;
+    min-width: 0;
+  }
+}

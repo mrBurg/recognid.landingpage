@@ -1,0 +1,33 @@
+FROM node:18.0-alpine3.15 AS development
+WORKDIR /usr/src/app
+ENV HOST=0.0.0.0
+ENV PORT=3000
+ENV NODE_ENV=development
+EXPOSE 3000
+CMD [ "yarn", "dev" ]
+
+FROM node:18.0-alpine3.15 AS dependencies
+ENV NODE_ENV=production
+WORKDIR /usr/src/app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+FROM node:18.0-alpine3.15 AS builder
+ENV NODE_ENV=development
+WORKDIR /usr/src/app
+COPY . .
+RUN yarn install --frozen-lockfile && NODE_ENV=production yarn build
+
+FROM node:18.0-alpine3.15 AS production
+WORKDIR /usr/src/app
+ENV HOST=0.0.0.0
+ENV PORT=3000
+ENV NODE_ENV=production
+COPY --chown=node --from=builder /usr/src/app/next.config.js ./
+COPY --chown=node --from=builder /usr/src/app/public ./public
+COPY --chown=node --from=builder /usr/src/app/.next ./.next
+COPY --chown=node --from=builder /usr/src/app/yarn.lock /usr/src/app/package.json ./
+COPY --chown=node --from=dependencies /usr/src/app/node_modules ./node_modules
+USER node
+EXPOSE 3000
+CMD [ "yarn", "start" ]

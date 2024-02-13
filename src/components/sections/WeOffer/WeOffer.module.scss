@@ -1,0 +1,82 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 8.8em 0 10em;
+
+  @media only screen and (max-width: $tab) {
+    padding: 3.5em 0 4.5em;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  margin-top: 4.7em;
+  column-gap: 6em;
+
+  @media only screen and (max-width: $tab) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5em;
+    margin-top: 1.5em;
+  }
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  min-width: 447px;
+  max-width: 447px;
+  height: 322px;
+  max-height: 322px;
+  border-radius: 14px;
+  border: 7px solid $rose-misty;
+
+  background-image: url(/images/ladyAccess.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media only screen and (max-width: $tab) {
+    height: 226px;
+    min-width: 0;
+    max-width: 314px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media only screen and (max-width: $tab) {
+    align-items: center;
+  }
+}
+
+.text,
+.list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.38em;
+  font-weight: 400;
+  color: $violet-light;
+  row-gap: 1.1em;
+
+  @media only screen and (max-width: $tab) {
+    font-size: 0.9em;
+  }
+}
+
+.button {
+  max-width: 260px;
+  margin: 2em 0 0;
+}

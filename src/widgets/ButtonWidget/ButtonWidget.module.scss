@@ -1,0 +1,29 @@
+@import '@scss/service';
+
+.button {
+  width: 100%;
+  font-size: 0.875em;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.85em 0;
+  background-color: $yellow;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $violetDark;
+  border: none;
+  transition: all 0.3s linear;
+  box-shadow: 2px 4px 6px rgba(37, 48, 149, 0.25);
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-dark;
+  }
+  &:active {
+    background-color: $yellow-light;
+  }
+  &:disabled {
+    background-color: $gray;
+    box-shadow: none;
+    cursor: auto;
+  }
+}

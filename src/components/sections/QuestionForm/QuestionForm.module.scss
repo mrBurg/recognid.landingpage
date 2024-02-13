@@ -1,0 +1,154 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.questionFormWrap {
+  background-image: url(/images/pinkWithColorsBackground.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 6.5em 0;
+}
+
+.questionInnerWrap {
+  background-color: $white;
+  margin: 0 6.25em;
+  padding: 4.5em 3.8em;
+  box-shadow: 0px 8px 24px rgba(74, 4, 67, 0.19);
+  border-radius: 12px;
+
+  @media only screen and (max-width: $tab) {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: $sm) {
+    padding: 2.5em 1.5em;
+  }
+
+  .sentFormTitle {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    color: $violetDark;
+
+    @media only screen and (max-width: $sm) {
+      font-size: 1.75em;
+    }
+  }
+}
+
+.title {
+  @media only screen and (max-width: $tab) {
+    font-size: 1.5em;
+  }
+}
+
+.subtitle {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  font-size: 0.88em;
+  color: $violet-light;
+  font-weight: 400;
+  margin: 2em auto 0;
+  line-height: 140%;
+}
+
+.form {
+  margin-top: 2.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+
+  @media only screen and (max-width: $sm) {
+    margin-top: 1.5em;
+    row-gap: 1em;
+  }
+}
+
+.inputsBlock {
+  display: flex;
+  width: 100%;
+  column-gap: 2.35em;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $sm) {
+    flex-direction: column;
+    row-gap: 1em;
+  }
+}
+
+.inputsSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 1.5em;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $sm) {
+    row-gap: 1em;
+  }
+}
+
+.input,
+.textField {
+  color: $violetDark;
+
+  @media only screen and (max-width: $sm) {
+    max-width: 100%;
+  }
+}
+
+.textField {
+  height: 110px;
+  max-height: 110px;
+}
+
+.submitForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: $sm) {
+    row-gap: 1.5em;
+  }
+}
+
+.buttonComponent {
+  margin: auto 0 0;
+}
+
+.message {
+  display: flex;
+  margin-top: 2em;
+  font-size: 1.5em;
+  justify-content: center;
+  @media only screen and (max-width: $sm) {
+    font-size: 1em;
+  }
+}
+
+.submitImageWrap {
+  display: flex;
+  margin-top: 3.5em;
+  justify-content: center;
+}
+
+.submitImage {
+  display: flex;
+  width: 63px;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.buttonWidget {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  margin-top: 3.75em;
+  max-width: 250px;
+  text-transform: uppercase;
+}

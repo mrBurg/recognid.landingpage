@@ -1,0 +1,227 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 7em;
+  padding-bottom: 7em;
+
+  @media only screen and (max-width: $tab) {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+  }
+}
+
+.accordion {
+  border: none;
+
+  &Wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25em;
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  &Item {
+    background-color: $white;
+    margin-bottom: 0.875em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Button {
+      display: flex;
+      align-items: center;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: $violet-light;
+      height: 77px;
+      background: $white;
+      box-shadow: 2px 4px 5px rgba(37, 48, 149, 0.1);
+      border: 1px solid $rose-misty;
+      border-radius: 5px;
+      padding: 0 1.2em;
+
+      @media only screen and (max-width: $small) {
+        font-size: 1.125em;
+      }
+
+      &::after {
+        display: inline-block;
+        content: '';
+        margin: auto 0 auto auto;
+        border-radius: 3px;
+
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+
+        border-top: 12px solid $violet-light;
+      }
+
+      &[aria-expanded='true'] {
+        background-color: $pink;
+        color: $white;
+        border-color: $pink;
+        border-radius: 5px 5px 0px 0px;
+        &::after {
+          border-top: 12px solid $white;
+          transform: rotate(180deg);
+        }
+      }
+
+      span {
+        margin-right: 0.5em;
+      }
+    }
+
+    &Panel {
+      background: $white;
+      border: 1px solid $rose-misty;
+      box-shadow: 2px 4px 5px rgba(37, 48, 149, 0.1);
+      border-radius: 0px 0px 5px 5px;
+      padding: 1em 0 1.5em;
+
+      .descrBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $violet-light;
+
+        span {
+          font-size: 1.125em;
+          margin: 0 1.33em;
+        }
+      }
+    }
+  }
+}
+
+.itemsWrap {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5.7em;
+  width: 100%;
+  column-gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: $tab) {
+    margin-top: 1.25em;
+    flex-direction: column;
+    // column-gap: none;
+  }
+
+  ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 67%;
+    row-gap: 2em; //0.75em;
+    column-gap: 1.3em;
+    // height: fit-content;
+    justify-content: center;
+  }
+  li {
+    width: 48%;
+    max-width: 365px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    width: 33%;
+    max-width: 365px;
+    color: $violet-light;
+    @media only screen and (max-width: $tab) {
+      margin-top: 2em;
+    }
+
+    .imgWrap {
+      display: flex;
+      height: 314px;
+      width: 365px;
+      align-self: center;
+
+      /* @media only screen and (max-width: $tab) {
+        height: 61px;
+        width: 61px;
+      } */
+    }
+
+    .txtWrap {
+      height: 80px;
+    }
+
+    /* span {
+    font-size: 1em;
+    padding: 0;
+    font-weight: 400;
+    color: $violet-light;
+    margin: auto 0;
+    line-height: 140%;
+
+    @media only screen and (max-width: $mob) {
+      font-size: 1em;
+    }
+
+    p {
+      margin-top: 1em;
+
+      @media only screen and (max-width: $small) {
+        margin-top: 0;
+      }
+    }
+  } */
+  }
+}
+
+.itemTitle {
+  color: $violet-light;
+  font-size: 1.24em;
+  font-weight: 700;
+  border: 1px solid $rose-misty;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(37, 48, 149, 0.1);
+  width: 100%;
+  max-width: 365px;
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $roseLight;
+  }
+
+  @media only screen and (max-width: $tab) {
+    max-width: none; //100%;
+  }
+
+  @media only screen and (max-width: $mob) {
+    font-size: 1.75em;
+  }
+}
+
+.choosedItem {
+  .itemTitle {
+    background-color: $pink;
+    color: $white;
+    border-color: $pink;
+    &:hover {
+      background-color: $pink;
+      cursor: auto;
+    }
+  }
+}
+
+.linkWidget {
+  max-width: 248px;
+  margin: 3.25em auto 0;
+}

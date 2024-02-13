@@ -1,0 +1,1 @@
+export { TextFiledComponent } from './TextFiledComponent';

@@ -1,0 +1,54 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: url(/images/firstBlock_bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBig {
+  color: $white;
+  margin-top: 4.1em;
+  @media only screen and (max-width: $tab) {
+    font-size: 3.5em;
+  }
+  @media only screen and (max-width: $mob) {
+    font-size: 2em;
+  }
+}
+
+.subTitle {
+  font-size: 2em;
+  font-weight: 500;
+  color: $white;
+  text-align: center;
+  margin-top: 1em;
+  line-height: 140%;
+
+  @media only screen and (max-width: $mob) {
+    font-size: 1.13em;
+  }
+  @media only screen and (max-width: $md) {
+    br {
+      content: ' ';
+    }
+    br:after {
+      content: ' ';
+    }
+  }
+}
+
+.button {
+  max-width: 260px;
+  margin: 56px auto 316px;
+}

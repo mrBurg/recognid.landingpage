@@ -1,0 +1,403 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(
+  _req: NextApiRequest,
+  res: NextApiResponse
+) {
+  res.status(200);
+  res.json({
+    title: 'KYC verifications and AML solutions | RecognID ✅',
+    meta: [
+      {
+        name: 'title',
+        description: 'KYC verifications and AML solutions | RecognID ✅',
+      },
+      {
+        name: 'description',
+        description:
+          'RecongID is an identity verification software company that helps you to improve the verification process according to AML, KYC regulation 🔝',
+      },
+    ],
+    firstblock: {
+      mainTitle: 'Do business, not document investigations',
+      subTitle:
+        'Find your safe ground in the world of KYC<br/>with the RecognID all-in-one product.',
+      buttonText: 'Get in touch',
+    },
+    weoffer: {
+      title: 'What we offer',
+      text: [
+        'RecognID covers a wide range of possibilities for clients to go through eKYC and AML processes online.',
+        'We provide them with handy verification processes according to AML, KYC regulation (including GDPR).',
+        'Let our identity verification software do the hard work for you.',
+      ],
+      buttonText: 'Get a free demo',
+    },
+    tabsblock: {
+      title: 'Reliable solution for identity proofing',
+      tabs: [
+        {
+          id: 'business',
+          name: 'For business',
+          title: 'For business:',
+          text: [
+            'Real-time automated KYC service',
+            'Compliance with regulators requirements',
+            'Trouble-free integration',
+            'Flexible customization',
+          ],
+          image: '/images/tabsBlock/business.webp',
+        },
+        {
+          id: 'users',
+          name: 'For end users',
+          title: 'For end users:',
+          text: [
+            'User-friendly service',
+            'Form free',
+            'Secure: no data storage',
+            'Trusted global partners',
+          ],
+          image: '/images/tabsBlock/users.webp',
+        },
+      ],
+      buttonText: 'Get started',
+    },
+    solutions: {
+      title: 'Our Solutions',
+      items: [
+        {
+          title: 'Liveness detection',
+          imageUrl: '/images/solutions/img-1.webp',
+          alt: 'image',
+          description:
+            'Sophisticated onboarding technologies preventing any spoofing attempts.',
+        },
+        {
+          title: 'Face search & matching',
+          imageUrl: '/images/solutions/img-2.webp',
+          alt: 'image',
+          description:
+            'Reliable account protection allows to avoid duplicate accounts with no additional authorizations.',
+        },
+        {
+          title: 'Age detection',
+          imageUrl: '/images/solutions/img-3.webp',
+          alt: 'image',
+          description:
+            'A must-have solution for products requiring age restrictions. No personal data storage or transfer included.',
+        },
+        {
+          title: 'ID doc capturing, <br/>OCR and verification',
+          imageUrl: '/images/solutions/img-4.webp',
+          alt: 'image',
+          description:
+            'Onboard clients without long questionnaires. Solution recognise long global ID doc list, including templates, photo matching, MRZ, photoshop detection, screen photo detection.',
+        },
+        {
+          title: 'Check in PEP, sanctions <br/>& AML watchlist',
+          imageUrl: '/images/solutions/img-5.webp',
+          alt: 'image',
+          description:
+            'Comply with regulatory requirements to fully eliminate any reputation risks.',
+        },
+        {
+          title: 'UI/UX customization',
+          imageUrl: '/images/solutions/img-8.webp',
+          alt: 'image',
+          description:
+            'A set of customization tools allow to bring uniqueness into the product as well as to adapt it to corporate identity standards.',
+        },
+      ],
+      buttonTitle: 'Learn more',
+      linkTo: 'form',
+    },
+    solutions_old: {
+      title: 'Our Solutions',
+      items: [
+        {
+          title: 'LIVENESS DETECTION',
+          imageUrl: '/images/solutions/phone-1.webp',
+          alt: 'phone with face',
+          innerList: [
+            { text: 'Age detection' },
+            { text: '3D mask' },
+            { text: 'Face matching (Selfie + ID doc)' },
+          ],
+        },
+        {
+          title: 'ID DOCUMENT VERIFICATION & OCR',
+          imageUrl: '/images/solutions/phone-2.webp',
+          alt: 'phone with document',
+          innerList: [
+            { text: 'Photoshop detection' },
+            { text: 'PEP, sanctions & AML watchlist' },
+            { text: 'Proof of address check' },
+            { text: 'UI/UX customization' },
+          ],
+        },
+        {
+          title: 'COMING VERY SOON:',
+          imageUrl: '/images/solutions/phone-3.webp',
+          alt: 'document and phone with document',
+          innerList: [
+            { text: 'Flexible verification flows' },
+            { text: 'KYC officer dashboard' },
+            { text: 'KYC monitoring' },
+            { text: 'Anti-fraud scoring' },
+            { text: '3D mask authorization' },
+          ],
+        },
+      ],
+      buttonTitle: 'Learn more',
+      linkTo: 'form',
+    },
+    integration: {
+      title:
+        'We make it simple to integrate our KYC software with your business ecosystem.',
+      mainImageUrl: '/images/integration/integration.webp',
+      items: [
+        {
+          title: 'Web SDK',
+          descriptiom:
+            'Ready-made solutions for automated onboarding with fast set-up and easy configuration.',
+          imageUrl: '/images/integration/desktop.svg',
+        },
+        {
+          title: 'Mobile SDK',
+          descriptiom:
+            'Send a link to customers and get verification results instantly in your Admin Panel or via webhook.',
+          imageUrl: '/images/integration/mobile.svg',
+        },
+        {
+          title: 'Webhooks',
+          descriptiom:
+            'Highly-customisable iOS and Android SDKs built on native tech stack for a seamless onboarding experience.',
+          imageUrl: '/images/integration/web-hooks.svg',
+        },
+        {
+          title: 'API integration (coming soon)',
+          descriptiom:
+            'Integrate our KYC and customer verification solutions into your platform, collect the data you need and get the results via API.',
+          imageUrl: '/images/integration/api.svg',
+        },
+      ],
+    },
+    usecases: {
+      title: 'Use cases',
+      items: [
+        {
+          title: 'KYC over onboarding process',
+          imageUrl: '/images/usecases/img-1.webp',
+          alt: 'lady with phone image',
+          innerList: [
+            { text: 'Liveness detection' },
+            { text: 'ID doc capturing and type recognising' },
+            { text: 'OCR' },
+            { text: 'Selfie & ID doc photo matching' },
+            { text: 'AML/PEP/Sanctions list screening' },
+          ],
+          footnote: 'Applies to global markets, form-free, secure.',
+        },
+        {
+          title: 'KYC monitoring',
+          imageUrl: '/images/usecases/img-2.webp',
+          alt: 'man with phone image',
+          innerList: [
+            { text: 'update ID doc info' },
+            { text: 'AML/PEP/Sanctions list screening' },
+          ],
+          footnote:
+            'Background checks, minimum user interactions, built-in anti-fraud.',
+        },
+        {
+          title: 'Authentication via Biometric<br/>(3D mask)',
+          imageUrl: '/images/usecases/img-3.webp',
+          alt: '3d mask image',
+          innerList: [],
+          footnote:
+            'Account authorization and recovery, exclusion of duplication, risk management.',
+        },
+        {
+          title: 'Age detection',
+          imageUrl: '/images/usecases/img-4.webp',
+          alt: 'age detection image',
+          innerList: [],
+          footnote:
+            'Access restriction without ID provided, up to 99,9% accuracy.',
+        },
+      ],
+    },
+    industries: {
+      title: 'Industries',
+      itemsList: [
+        {
+          title: 'FinTech',
+          imageUrl: '/images/industries/fintech.webp',
+          description:
+            'Our solutions offer the best fit for online banks, wallets and P2P lending services.',
+        },
+        {
+          title: 'Crypto',
+          imageUrl: '/images/industries/crypto.webp',
+          description:
+            'Secure onboarding for any type of crypto business, including CEX, DEX, token sale platforms.',
+        },
+        {
+          title: 'Gaming',
+          imageUrl: '/images/industries/gaming.webp',
+          description:
+            'Fast and comprehensible client verification for both sports betting and online casino companies.',
+        },
+        {
+          title: 'Insurance',
+          imageUrl: '/images/industries/insurance.webp',
+          description:
+            'Get the most of your business with proper fraud prevention, PEP/AML checking, identity and address proofing.',
+        },
+        {
+          title: 'Telecom',
+          imageUrl: '/images/industries/telecom.webp',
+          description:
+            'Stay compliant with the telecom regulators, prevent fraud and verify your customer identity with RecognID.',
+        },
+        {
+          title: 'Mobility',
+          imageUrl: '/images/industries/mobility.webp',
+          description:
+            'A huge variety of onboarding services implemented for a modern dynamic landscape: check-ins, bookings, car sharing and many others.',
+        },
+        {
+          title: 'Esports',
+          imageUrl: '/images/industries/esports.webp',
+          description:
+            'Drive the industry with user-friendly verification processes for both platforms and players.',
+        },
+      ],
+      buttonText: 'Get in touch',
+    },
+    recognition: {
+      title: 'Global Recognition and Implementation',
+      trustedTitle: 'Trusted by:',
+      partnersTitle: 'Key Partners:',
+      certificationsTitle: 'Certifications:',
+      mediaAboutUsTitle: 'Media about us:',
+      trustedItems: [
+        {
+          alt: 'horacredit logo',
+          src: '/images/recognition/imagesBlock1/horacredit.svg',
+        },
+        {
+          alt: 'toya logo',
+          src: '/images/recognition/imagesBlock1/toya.svg',
+        },
+        {
+          alt: 'webvay logo',
+          src: '/images/recognition/imagesBlock1/webvay.svg',
+        },
+        {
+          alt: 'creditkassa logo',
+          src: '/images/recognition/imagesBlock1/creditkassa.svg',
+        },
+      ],
+      partnersItems: [
+        {
+          alt: 'creditkassa logo',
+          src: '/images/recognition/imagesBlock2/complyAdvantage.svg',
+          link: '',
+        },
+        {
+          alt: 'horacredit logo',
+          src: '/images/recognition/imagesBlock2/facetec.svg',
+          link: '',
+        },
+      ],
+      certificationsItems: [
+        {
+          alt: 'ISO 30107-3 Level 1',
+          src: '/images/recognition/certifications/img-1.svg',
+          link: '',
+        },
+        {
+          alt: 'ISO 30107-3 Level 2',
+          src: '/images/recognition/certifications/img-2.svg',
+          link: '',
+        },
+        {
+          alt: 'ISO 27001',
+          src: '/images/recognition/certifications/img-3.svg',
+          link: '',
+        },
+        {
+          alt: 'GDPR Compliant',
+          src: '/images/recognition/certifications/img-4.svg',
+          link: '',
+        },
+      ],
+      mediaAboutUsItems: [
+        {
+          alt: 'The fintech times',
+          src: '/images/recognition/mediaAboutUs/fintech-times.svg',
+          srcHov: '/images/recognition/mediaAboutUs/fintech-times_hov.svg',
+          link: 'https://thefintechtimes.com/recognid-with-deep-expertise-in-fintech-enters-the-global-kyc-market/',
+        },
+        {
+          alt: 'Finance magnates',
+          src: '/images/recognition/mediaAboutUs/finance-magnates.svg',
+          srcHov: '/images/recognition/mediaAboutUs/finance-magnates_hov.svg',
+          link: 'https://www.financemagnates.com/thought-leadership/solving-the-kyc-trilemma-with-recognid/',
+        },
+      ],
+    },
+    form: {
+      title: 'Got a question?<br/>We are here to help',
+      subtitle:
+        "For more information on how RecognID could solve your business goals, please complete the form below. We'll reply as quickly as possible.",
+      firstName: {
+        placeholder: 'First name*',
+        id: 'firstName',
+      },
+      workEmail: {
+        placeholder: 'Work Email*',
+        id: 'workEmail',
+      },
+      lastName: {
+        placeholder: 'Last name*',
+        id: 'lastName',
+      },
+      companyName: {
+        placeholder: 'Company name*',
+        id: 'companyName',
+      },
+      request: {
+        placeholder: 'Type your request',
+        id: 'request',
+        size: 'big',
+      },
+      policyCheckboxText:
+        'By sending this request I agree with the <a href="/docs/privacy_policy.pdf" target="_blank">privacy policy</a> and ready to receive relevant information via email',
+      validFormMessage: 'Your request has been sent',
+      validFormDescription: 'Our team will contact you shortly',
+      validButtonText: 'Ok',
+      invalidWorkEmailMessage: 'Please enter a valid email',
+      invalidPolicyCheckboxMessage: 'You must agree Privacy Policy to proceed',
+      invalidFormMessage: 'Something went wrong',
+      invalidFormDescription: 'Please try again later',
+      invalidButtonText: 'Try again',
+    },
+    footer: {
+      policy: {
+        label: 'Privacy policy',
+        url: '/docs/privacy_policy.pdf',
+      },
+      regognitionText: 'RecognID a part of MD Finance',
+      mail: 'sales@mdfin.com',
+      contacts: [{ title: 'Contact email:', value: 'sales@recognid.com' }],
+    },
+    cookiesPopup: {
+      text: '<p>RecognID uses cookies to monitor how visitors interact with our website in order to improve its functionality and enhance your navigation experience. We may also use cookies to customize advertising of our products. To learn more about cookies read our <a href="/docs/privacy_policy.pdf" target="_blank">Privacy Policy</a>.</p><p>By clicking “Accept all cookies” you give consent to install and store on your device all necessary and optional cookies.</p>',
+      buttonAll: 'Accept all cookies',
+      buttonNecessary: 'Accept only necessary cookies',
+    },
+  });
+}

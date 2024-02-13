@@ -1,0 +1,13 @@
+@import '@scss/service/';
+
+.header {
+  //@extend %big-shadow;
+  //background-color: #4040400c;
+  //z-index: 1;
+  // position: relative;
+}
+
+.mobileMenu {
+  display: flex;
+  justify-content: space-between;
+}

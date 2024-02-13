@@ -1,0 +1,158 @@
+@import '@scss/service';
+
+.recognitionWrap {
+  margin-top: 6em;
+
+  @media only screen and (max-width: $tab) {
+    margin-top: 2em;
+  }
+}
+
+.title {
+  padding: 0 0.75em;
+  font-size: 2em;
+  font-weight: 600;
+  color: #482c42;
+  text-align: center;
+  @media only screen and (max-width: $tab) {
+    font-size: 1.5em;
+  }
+}
+
+.containerWrap {
+  margin-top: 1em;
+  padding-top: 1.25em;
+  background-image: url('/images/dottedBackground.svg');
+}
+
+.imageBlocksWrap {
+  padding: 1.25em 0.5em 2.5em;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+
+  @media only screen and (max-width: $tab) {
+    flex-direction: column;
+    row-gap: 3em;
+  }
+
+  .imageBlockItem {
+    flex-grow: 1;
+    flex-basis: 50%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.last {
+    padding-bottom: 5em;
+  }
+}
+
+.trustedBlock {
+  @media only screen and (max-width: $mob) {
+    column-gap: 1.4em;
+    margin-top: 2.25em;
+
+    li {
+      max-width: 138px;
+    }
+  }
+}
+.partnersBlock {
+  @media only screen and (max-width: $mob) {
+    margin-top: 2.25em;
+  }
+}
+
+.certificationBlock {
+  max-width: 327px;
+  row-gap: 1.5em;
+  margin: 2.5em auto 0;
+  @media only screen and (max-width: $mob) {
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    margin-top: 2.25em;
+  }
+}
+.mediaAboutUsBlock {
+  li {
+    box-shadow: 0px 8px 16px rgba(74, 4, 67, 0.19);
+    border-radius: 12px;
+  }
+}
+
+.comingsoon {
+  font-size: 1.5em;
+  color: $rose;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 351px;
+  margin: 2em auto 0;
+
+  @media only screen and (max-width: $mob) {
+    margin-top: 2.25em;
+  }
+
+  &Title {
+    font-size: 1.125em;
+    font-weight: 500;
+    color: $rose;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    @media only screen and (max-width: $mob) {
+      font-size: 1em;
+    }
+  }
+
+  .item {
+    padding: 0.5em 0.75em 1.5em;
+
+    &ImgWrap {
+      display: flex;
+      justify-content: center;
+      background: $white;
+      box-shadow: 0px 6px 16px rgba(74, 4, 67, 0.19);
+      border-radius: 12px;
+
+      a {
+        display: flex;
+      }
+    }
+  }
+}
+
+.btnWrap {
+  display: flex;
+  column-gap: 1.5em;
+  justify-content: center;
+}
+
+.btnPrev,
+.btnNext {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+
+  background-image: url(/images/recognition/mediaAboutUs/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &:hover {
+    background-image: url(/images/recognition/mediaAboutUs/arrow_hov.svg);
+  }
+}
+.btnPrev {
+  transform: rotate(180deg);
+}

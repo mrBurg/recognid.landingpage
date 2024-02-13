@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "esnext", //"es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@interfaces": ["src/interfaces"],
+      "@routes": ["src/routes"],
+      "@scss/*": ["src/scss/*"],
+      "@utils": ["src/utils"],
+      "@src/*": ["src/*"],
+      "@root/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
+  "exclude": ["node_modules"]
+}

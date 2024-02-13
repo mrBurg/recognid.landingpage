@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 9em;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $medium) {
+    padding: 0 5em;
+    padding: 0 1.5em;
+  }
+}
+
+.titleBig {
+  font-size: 3.5em;
+  font-weight: 700;
+  color: $violetDark;
+  text-align: center;
+
+  //@media only screen and (max-width: $mob) {
+  @media only screen and (max-width: $tab) {
+    font-size: 2em;
+  }
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: $violetDark;
+  text-align: center;
+
+  @media only screen and (max-width: $tab) {
+    font-size: 2em;
+  }
+
+  @media only screen and (max-width: $small) {
+    font-size: 1.7em;
+  }
+}

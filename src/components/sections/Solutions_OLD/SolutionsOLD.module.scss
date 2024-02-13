@@ -1,0 +1,88 @@
+@import '/src//scss/grid/pages.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6.8em;
+  padding-bottom: 6.8em;
+
+  @media only screen and (max-width: $tab) {
+    padding-top: 4.5em;
+    padding-bottom: 4.5em;
+  }
+}
+
+.solutionsItemsWrap {
+  margin-top: 4em;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 4em;
+
+  @media only screen and (max-width: $tab) {
+    margin-top: 3.4em;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3.5em;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    width: 100%;
+    max-width: 330px; //324px;
+    text-align: center;
+
+    .image {
+      display: flex;
+      width: 100%;
+      max-width: 324px;
+      height: 288px;
+      max-height: 288px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    h4 {
+      display: flex;
+      align-items: flex-end;
+      font-size: 2em;
+      color: $violetDark;
+      height: 90px;
+      justify-content: center;
+
+      @media only screen and (max-width: $tab) {
+        height: auto;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.innerList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4em;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.5em;
+
+    span {
+      font-size: 1.25em;
+      color: $violet-light;
+      text-align: start;
+
+      @media only screen and (max-width: $tab) {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+.linkWidget {
+  max-width: 240px;
+  margin: 2em auto 0;
+}

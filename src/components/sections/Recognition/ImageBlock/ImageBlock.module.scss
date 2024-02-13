@@ -1,0 +1,38 @@
+@import '@scss/service';
+@import '@scss/grid/pages';
+
+.imagesTitle {
+  font-size: 1.125em;
+  font-weight: 500;
+  color: $rose;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  @media only screen and (max-width: $mob) {
+    font-size: 1em;
+  }
+}
+
+.imagesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 447px;
+  margin-top: 2.5em;
+  row-gap: 2.25em;
+
+  @media only screen and (max-width: $tab) {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $mob) {
+    column-gap: 2.75em;
+    justify-content: center;
+  }
+}
+
+.smallList {
+  flex-direction: column;
+}
